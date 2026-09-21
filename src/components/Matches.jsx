@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Matches.css';
 
-import BotolaProLogo from './USMO IMG/Icons/botolapro2.svg';
-import UnknownTeamLogo from './USMO IMG/Icons/unknown.team.png';
+import BotolaProLogo from '../pages/USMO IMG/Icons/botolapro2.svg';
+import UnknownTeamLogo from '../pages/USMO IMG/Icons/unknown.team.png';
 import USMOLogo from '../pages/USMO IMG/logo/cropped_circle_image.png';
 export default function Matches() {
   // Target date for the upcoming match
