@@ -1,0 +1,530 @@
+body {
+  margin: 0;
+  padding-top: 50px;
+  font-family: 'Cairo', sans-serif;
+  background-color: rgb(255, 255, 255);
+
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+
+
+.matches {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.cards-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.h2 {
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-family: 'Cairo', sans-serif;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.769);
+  width: 570px;
+  height: fit-content;
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 10px;
+  gap: 30px;
+  color: rgb(255, 255, 255);
+  position: relative;
+}
+
+.tournament-logo img {
+  width: 300px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  filter: grayscale(100%);
+  opacity: 40%;
+
+}
+
+.date {
+  font-size: 16px;
+  color: #ffffff;
+  z-index: 2;
+}
+
+.teams {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  gap: 100px;
+  z-index: 2;
+}
+
+.team1 img,
+.team2 img {
+  width: 80px;
+  height: 80px;
+  z-index: 2;
+}
+
+.result {
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.highlights-link a {
+  color: rgb(255, 255, 255);
+  padding-bottom: 10px;
+  z-index: 2;
+}
+
+.page-link a {
+  background-color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  border-radius: 14px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.page-link a:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+}
+
+@media (max-width: 480px) {
+  .cards-wrapper {
+    flex-direction: column;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    max-width: 350px;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 20px;
+    color: rgb(255, 255, 255);
+
+  }
+
+  .teams {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+}
+
+.standings {
+  width: 1200px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.standings h2 {
+  font-family: 'Cairo', sans-serif;
+  color: #000000;
+  text-align: right;
+  margin-bottom: 30px;
+}
+
+.table {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid #000000;
+}
+
+.table-header,
+.table-row {
+  display: grid;
+  grid-template-columns: 50px 2fr repeat(8, 1fr);
+  align-items: center;
+  padding: 15px 10px;
+}
+
+.table-header {
+  color: #858585;
+  background-color: #ffffff;
+  font-weight: bold;
+}
+
+.table-row {
+  background: #ffffff;
+  color: #000000;
+  margin-bottom: 2px;
+  border-radius: 4px;
+  border-bottom: 2px solid black;
+}
+
+.table-row.active {
+  background: #000000;
+  color: rgb(255, 255, 255);
+  padding: 20px 10px;
+}
+
+.table-row .team {
+  text-align: left;
+  font-weight: bold;
+}
+
+.table-header .team {
+  text-align: left;
+}
+
+.full-btn {
+  margin-top: 25px;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.full-btn:hover {
+  background: #888888;
+}
+
+@media (max-width: 480px) {
+  .table-header span:nth-child(4),
+  /* W */
+  .table-header span:nth-child(5),
+  /* D */
+  .table-header span:nth-child(6),
+  /* L */
+  .table-header span:nth-child(7),
+  /* GF */
+  .table-header span:nth-child(8)
+
+  /* GA */
+    {
+    display: none;
+  }
+
+  .table-row span:nth-child(4),
+  /* W */
+  .table-row span:nth-child(5),
+  /* D */
+  .table-row span:nth-child(6),
+  /* L */
+  .table-row span:nth-child(7),
+  /* GF */
+  .table-row span:nth-child(8)
+
+  /* GA */
+    {
+    display: none;
+  }
+
+  .standings {
+    width: 90%;
+    margin: 50px auto;
+    text-align: center;
+  }
+
+  .table-row {
+    border-radius: 0;
+  }
+
+  .table-header,
+  .table-row {
+    display: grid;
+    grid-template-columns: 50px 2fr repeat(4, 1fr);
+    align-items: center;
+    padding: 15px 10px;
+    border-radius: 10px;
+
+
+  }
+}
+
+/* Main Container */
+.squad-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Position Section */
+.position-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.position-title {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+/* --- Flexbox Grid --- */
+.player-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* --- Card Flip Container --- */
+.player-card {
+  flex: 0 0 calc(25% - 11.25px);
+  aspect-ratio: 3 / 4;
+  perspective: 1000px;
+  /* Required for 3D effect */
+  background-color: transparent;
+}
+
+/* Inner wrapper that actually rotates */
+.player-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+  /* Allows 3D elements inside */
+}
+
+/* Trigger the flip on hover */
+.player-card:hover .player-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Base styles for both faces */
+.player-card-front,
+.player-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+  /* Hides the back of the element when turned away */
+  overflow: hidden;
+  border-radius: 4px;
+  /* Optional: adds a slight rounding to the cards */
+}
+
+/* --- Front Face Styles --- */
+.player-card-front {
+  background: linear-gradient(180deg, #444 0%, #222 100%);
+}
+
+.player-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: #555;
+  /* Fallback color */
+  background-image: url('path-to-your-player-image-with-transparent-bg.png');
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.player-number {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.player-info {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 2;
+}
+
+.player-name {
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.2;
+  display: block;
+  text-transform: uppercase;
+}
+
+/* Gradient Overlay for Text Readability on Front */
+.player-card-front::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+/* --- Back Face Styles --- */
+.player-card-back {
+  background: #ffffff;
+  border: 1px solid #333;
+  transform: rotateY(180deg);
+  /* Starts already flipped so it faces away */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styling the data on the back */
+.player-stats {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.player-stats p {
+  font-size: 0.8rem;
+  color: #000000;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #333;
+  padding-bottom: 4px;
+}
+
+.player-stats span {
+  color: #000000;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.7rem;
+}
+
+/* Responsive Adjustments for Mobile */
+@media (max-width: 768px) {
+  .squad-container {
+    padding: 10px 20px;
+  }
+
+  .player-card {
+    flex: 0 0 calc(33.333% - 10px);
+    /* 3 cards per row on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .player-card {
+    flex: 0 0 calc(50% - 7.5px);
+    /* 2 cards per row on phones */
+  }
+}
+
+
+/* BUTTON */
+.page-link {
+  margin-top: 20px;
+}
+
+.page-link a {
+  text-decoration: none;
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/*
+
+
+*/
+
+.history {
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 30px;
+  width: 1200px;
+
+}
+
+.history h2 {
+  font-family: 'Cairo', sans-serif;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.history p {
+  color: rgb(0, 0, 0);
+  font-family: 'Cairo', sans-serif;
+  max-width: 1160px;
+  line-height: 1.6;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+/* Arabic */
+html[dir="rtl"] .history p {
+  text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+  .history {
+    width: 100%;
+
+  }
+
+  .history p {
+    font-size: 1rem;
+    width: 90%;
+  }
+}
+
+.full-link {
+  display: inline-block;
+  margin-top: 20px;
+  background: #000000;
+  color: rgb(255, 255, 255);
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.full-link:hover {
+  background: #888888;
+}

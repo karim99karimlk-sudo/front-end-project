@@ -1,0 +1,144 @@
+body{
+  margin: 0;
+  padding-top: 120px;
+  font-family: 'Cairo', sans-serif;
+  background-color: #ffffff;
+
+}
+a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+
+
+.standings {
+  width: 1200px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.standings h2 {
+  font-family: 'Cairo', sans-serif;
+  color: #000000;
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.standings h3 {
+  font-family: 'Cairo', sans-serif;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.standings-top{
+    display:flex;
+    justify-content:center;
+
+    align-items:center;
+    gap:20px;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+}
+
+#seasonSelect{
+    padding:10px 16px;
+    border:1px solid #000000;
+    border-radius:18px;
+    font-size:15px;
+    font-family: 'Cairo', sans-serif;
+    text-align: left;
+    cursor:pointer;
+    background:#000000;
+    color: white;
+}
+
+#seasonSelect:focus{
+    outline:none;
+    border-color:#fff;
+}
+
+
+.table {
+  width: 100%;
+}
+
+.table-header,
+.table-row {
+  display: grid;
+  grid-template-columns: 50px 2fr repeat(8, 1fr);
+  align-items: center;
+  padding: 10px 10px;
+}
+
+.table-header {
+  color: #555555;
+  font-weight: bold;
+}
+
+.table-row {
+  background: #ffffff;
+  color: #000000;
+  border-bottom: 2px solid #e7e7e7ee;
+  border-radius: 4px;
+}
+.table-row:hover {
+  background: #d8d8d8;
+}
+
+.table-row.active {
+  background: #000000;
+  color: rgb(255, 255, 255);
+  border: none;
+}
+
+.table-row .team {
+  text-align: left;
+  font-weight: bold;
+}
+
+.table-header .team {
+  text-align: left;
+}
+
+
+
+@media (max-width: 480px) {
+  .table-header span:nth-child(4), /* W */
+.table-header span:nth-child(5), /* D */
+.table-header span:nth-child(6), /* L */
+.table-header span:nth-child(7), /* GF */
+.table-header span:nth-child(8)  /* GA */
+{
+  display: none;
+}
+  .table-row span:nth-child(4), /* W */
+.table-row span:nth-child(5), /* D */
+.table-row span:nth-child(6), /* L */
+.table-row span:nth-child(7), /* GF */
+.table-row span:nth-child(8)  /* GA */
+{
+  display: none;
+}
+
+.standings {
+  width: 100%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.table-row {
+  border-radius: 0;
+}
+
+.table-header,
+.table-row {
+  display: grid;
+  grid-template-columns: 50px 2fr repeat(4, 1fr);  
+  align-items: center;
+  padding: 5px 10px;
+  
+}
+}

@@ -1,0 +1,84 @@
+/* Container layout and sizing */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 94vh; /* Scalable height based on viewport */
+  min-height: 300px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 12px 12px; /* Optional rounded corners */
+}
+
+/* Background image responsiveness & smooth transition */
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out; /* Smooth fade effect */
+}
+
+/* Faded state during image switch */
+.hero-img.fade-out {
+  opacity: 0;
+}
+
+/* Dark gradient overlay for text readability */
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  /* how much you want faded*/
+  background: linear-gradient(to bottom, transparent, rgb(255, 255, 255));
+  /* or match page bg*/
+  border-radius: 0 0 10px 10px;
+  z-index: 2;
+}
+
+/* Typography and text centering */
+.title {
+  position: absolute;
+  z-index: 3;
+  color: #000000;
+  text-align: center;
+  bottom: 50px;
+  margin: 0 auto;
+  font-weight: 700;
+  padding: 0 20px;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); 
+  /* Increased font sizing: scales smoothly from 2.25rem to 4.5rem */
+  font-size: clamp(2.25rem, 5vw + 1rem, 4.5rem);
+  line-height: 1.3;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .hero {
+    height: 75vh;
+    min-height: 250px;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 70vh;
+    min-height: 200px;
+    border-radius: 0; /* Full bleed on tiny screens */
+  }
+
+  .title {
+    padding: 0 10px;
+  }
+}

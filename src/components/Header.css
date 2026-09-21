@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+}
+
+
+/*==========================
+HEADER CONTAINER
+==========================*/
+
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+}
+
+#menu-btn,
+#close-btn {
+   display: none;
+    cursor: pointer;
+}
+
+
+
+/*==========================
+HEADER
+==========================*/
+
+header {
+    position: relative;
+    height: 95px;
+    background: #000000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+    overflow: hidden;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Oi";
+    font-size: 32px;
+}
+
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 55px;
+    padding-left: 100px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: .3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/*==========================
+BADGE
+==========================*/
+
+.badge {
+    position: absolute;
+    left: 40px;
+    top: -8px;
+}
+
+.badge img {
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255,255,255);
+    transform: rotate(10deg);
+}
+
+/*==========================
+RESPONSIVE
+==========================*/
+@media(max-width: 900px) {
+   
+
+   
+
+    header {
+        height: 70px;
+        padding: 0 20px;
+    }
+
+    .logo a {
+        font-size: 24px;
+    }
+
+    /* Hamburger */
+    #menu-btn {
+        display: block;
+        font-size: 30px;
+        color: #ffff;
+        z-index: 1002;
+    }
+
+    /* Dimmed background overlay */
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+}
+
+.nav-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Mobile Side Navigation Drawer */
+nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 380px;
+  height: 100vh;
+  background: linear-gradient(145deg, #0f0f0f 0%, #000000 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), right 0.4s ease;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+  padding: 40px 20px;
+}
+
+nav.active {
+  right: 0;
+}
+
+/* Close Button Styling */
+#close-btn {
+  position: absolute;
+  top: 25px;
+  right: 25px; /* RTL placement */
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 22px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+#close-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
+}
+
+/* Navigation List */
+nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav li {
+  width: 100%;
+  text-align: center;
+}
+
+/* Link Styling & Animations */
+nav a {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 600;
+  color: #d1d1d1;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  position: relative;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Active / Hover accent line */
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background: #ffffff; /* Replace with your primary team accent color if desired */
+  transition: width 0.3s ease, left 0.3s ease;
+  border-radius: 2px;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 80%;
+  left: 10%;
+}
+
+    .badge {
+        display: none;
+    }
+
+}
