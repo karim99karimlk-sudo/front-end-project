@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { Hero } from '../components/Hero';
@@ -38,10 +39,10 @@ export function HomePage() {
                 </div>
               </div>
               <div className="highlights-link">
-                <a style={{ display: 'none' }} href="#" target="_blank" rel="noreferrer">
+                <Link style={{ display: 'none' }} to="#" target="_blank" rel="noreferrer">
                   <i className="fa-solid fa-play"></i>
                   ملخص المباراة
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -65,17 +66,17 @@ export function HomePage() {
                 </div>
               </div>
               <div className="highlights-link">
-                <a style={{ display: 'none' }} href="#" target="_blank" rel="noreferrer">
+                <Link style={{ display: 'none' }} to="#" target="_blank" rel="noreferrer">
                   <i className="fa-solid fa-play"></i>
                   ملخص المباراة
-                </a>
+                </Link>
               </div>
             </div>
           </div>
         </div>
-        <a href="/schedule" className="full-link">
+        <Link to="/schedule" className="full-link">
           الجدول الكامل
-        </a>
+        </Link>
       </section>
 
       <section className="standings">
@@ -161,9 +162,9 @@ export function HomePage() {
           </div>
         </div>
 
-        <a href="/standings" className="full-link">
+        <Link to="/standings" className="full-link">
           الترتيب كامل
-        </a>
+        </Link>
       </section>
 
       <section className="squad-container">
@@ -293,7 +294,7 @@ export function HomePage() {
         </section>
 
         <section className="team-link">
-          <a
+          <Link
             style={{
               display: 'flex',
               maxWidth: 'fit-content',
@@ -301,11 +302,11 @@ export function HomePage() {
               justifyContent: 'center',
               alignItems: 'center',
             }}
-            href="/team"
+            to="/team"
             className="full-link"
           >
             الفريق كامل
-          </a>
+          </Link>
         </section>
       </section>
 
@@ -322,9 +323,9 @@ export function HomePage() {
         <p>
           أنتجت مدرسة النادي العديد من الأسماء البارزة في كرة القدم على الصعيدين الوطني والدولي. وعلى مرّ السنوات، بنى النادي سمعة قوية في تطوير المواهب الشابة وتكوين لاعبين محترفين للمستقبل.
         </p>
-        <a href="/history" className="full-link" style={{ marginBottom: '10px' }}>
+        <Link to="/history" className="full-link" style={{ marginBottom: '10px' }}>
           التاريخ كامل
-        </a>
+        </Link>
       </section>
 
       <Footer />
