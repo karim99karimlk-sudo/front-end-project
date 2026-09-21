@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import './Matches.css';
 
 import BotolaProLogo from '../pages/USMO IMG/Icons/botolapro2.svg';
