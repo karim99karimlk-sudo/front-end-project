@@ -3,81 +3,19 @@ import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { Hero } from '../components/Hero';
 import './HomePage.css';
-import BototaProLogo from './USMO IMG/Icons/botolapro2.svg';
-import UnknownTeamLogo from './USMO IMG/Icons/unknown.team.png';
-import USMOLogo from '../pages/USMO IMG/logo/cropped_circle_image.png';
+import Matches from '../components/Matches';
 
 
 export function HomePage() {
   return (
     <>
-      <meta name="google-site-verification" content="40ViloN9OXBDRIQerJ-cP3EN9_4OkyNgiJwLKR1e6ZE" />
       <title>USMOUJDA</title>
 
       < Header />
 
       < Hero />
 
-      <section className="matches">
-        <div className="cards-wrapper">
-          <div className="match-card">
-            <div className="h2">المباراة القادمة</div>
-            <div className="card">
-              <div className="tournament-logo">
-                <img src={BototaProLogo} alt="" />
-              </div>
-              <div className="date">
-                <strong>الدورة 1</strong> - 00-00-00
-              </div>
-              <div className="teams">
-                <div className="team1">
-                  <img src={USMOLogo} alt="" /> <br /> USMO
-                </div>
-                <div className="result">VS</div>
-                <div className="team2">
-                  <img src={UnknownTeamLogo} alt="" /> <br /> MCO
-                </div>
-              </div>
-              <div className="highlights-link">
-                <Link style={{ display: 'none' }} to="#" target="_blank" rel="noreferrer">
-                  <i className="fa-solid fa-play"></i>
-                  ملخص المباراة
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <div className="match-card">
-            <div className="h2">المباراة الأخيرة</div>
-            <div className="card">
-              <div className="tournament-logo">
-                <img src={BototaProLogo} alt="" />
-              </div>
-              <div className="date">
-                <strong>الدورة 2</strong> - 00-00-00
-              </div>
-              <div className="teams">
-                <div className="team2">
-                  <img src={UnknownTeamLogo} alt="" /> <br /> SCCM
-                </div>
-                <div className="result">VS</div>
-                <div className="team1">
-                  <img src={USMOLogo} alt="" /> <br /> USMO
-                </div>
-              </div>
-              <div className="highlights-link">
-                <Link style={{ display: 'none' }} to="#" target="_blank" rel="noreferrer">
-                  <i className="fa-solid fa-play"></i>
-                  ملخص المباراة
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-        <Link to="/schedule" className="full-link">
-          الجدول الكامل
-        </Link>
-      </section>
+      <Matches />
 
       <section className="standings">
         <h2>ترتيب البطولة الإحترافية للقسم الوطني 2</h2>
