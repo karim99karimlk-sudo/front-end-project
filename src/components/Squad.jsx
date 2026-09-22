@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
-import './Squad.css';
+import './SquadStyle.css';
 
-// Asset imports
+// Asset images imports
 import AklidouImg from '../pages/USMO IMG/logo/cropped_circle_image.png';
 import AzeroualImg from '../pages/USMO IMG/logo/cropped_circle_image.png';
 import MahdoubImg from '../pages/USMO IMG/logo/cropped_circle_image.png';
