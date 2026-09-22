@@ -66,7 +66,7 @@ export default function Squad() {
         {players.map((player) => (
           <div className="player-card" key={player.id}>
             <div className="player-card-inner">
-              {/* Front Face */}
+              {/* Front card Face */}
               <div className="player-card-front">
                 <span className="player-number">{player.number}</span>
                 <div className="player-image-wrapper">
