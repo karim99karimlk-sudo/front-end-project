@@ -78,7 +78,7 @@ export default function Squad() {
                 </div>
               </div>
 
-              {/* Back Face */}
+              {/* Back card Face */}
               <div className="player-card-back">
                 <div className="back-header">
                   <span className="back-number">#{player.number}</span>
