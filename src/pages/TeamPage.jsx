@@ -15,6 +15,7 @@ export function TeamPage() {
           color: 'black',
           fontFamily: "'Cairo', sans-serif",
           textAlign: 'center',
+          color:'#ffffff',
         }}
       >
         قريبا...

@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
+
+.history-section {
+  font-family: 'Cairo', sans-serif;
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+.section-header {
+  text-align: right;
+  margin-bottom: 25px;
+}
+
+.section-header h2 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.section-header .subtitle {
+  color: #a0a0a0;
+  font-size: 15px;
+}
+
+/* History Card Container */
+.history-card {
+  background: linear-gradient(145deg, #121212 0%, #1a1a1a 100%);
+  border: 1px solid #282828;
+  border-radius: 12px;
+  padding: 35px 30px;
+  display: flex;
+  gap: 35px;
+  align-items: flex-start;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Founding Badge */
+.history-badge-wrapper {
+  flex-shrink: 0;
+}
+
+.founding-badge {
+  background-color: #1f1f1f;
+  border: 1px solid #333333;
+  border-radius: 12px;
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.founding-badge .year {
+  font-size: 32px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.founding-badge .label {
+  font-size: 12px;
+  color: #a0a0a0;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+/* Paragraph Content */
+.history-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: right;
+}
+
+.history-content p {
+  color: #cccccc;
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.history-content p strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.history-content p em {
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.history-intro {
+  font-size: 17px !important;
+  color: #e0e0e0 !important;
+}
+
+/* Action Link */
+.history-link-wrapper {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.full-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  border: 1px solid #333333;
+  color: #ffffff;
+  padding: 10px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.full-link:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+/* Responsive Queries */
+@media (max-width: 850px) {
+  .history-card {
+    flex-direction: column;
+    padding: 25px 20px;
+    gap: 20px;
+  }
+
+  .history-badge-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .founding-badge {
+    flex-direction: row;
+    gap: 12px;
+    padding: 10px 20px;
+    width: auto;
+  }
+
+  .founding-badge .year {
+    font-size: 24px;
+  }
+
+  .founding-badge .label {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-header h2 {
+    font-size: 22px;
+  }
+
+  .history-content p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .history-intro {
+    font-size: 15px !important;
+  }
+}

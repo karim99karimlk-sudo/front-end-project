@@ -43,7 +43,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
-    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+    box-shadow: 0 5px 15px rgba(250, 250, 250, 0.414);
     overflow: hidden;
 }
 

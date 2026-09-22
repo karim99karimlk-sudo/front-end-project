@@ -259,7 +259,7 @@ export function StandingsPage() {
     <section className="standings">
       <div className="standings-top">
         <div>
-          <h2>الترتيب</h2>
+          <h2>ترتيب البطولة الاحترافية للقسم الوطني 2</h2>
           <select
             id="seasonSelect"
             value={selectedSeason}

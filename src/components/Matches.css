@@ -328,7 +328,7 @@
 
 /* Bottom Full Schedule Link */
 .full-schedule-wrapper {
-  margin-top: 30px;
+ margin-top: 25px;
   text-align: center;
 }
 
@@ -337,7 +337,8 @@
   align-items: center;
   gap: 8px;
   background-color: transparent;
-  color: #000000;
+  border: 1px solid #333333;
+  color: #ffffff;
   padding: 10px 24px;
   border-radius: 25px;
   text-decoration: none;
@@ -351,6 +352,7 @@
   color: #000000;
   border-color: #ffffff;
 }
+
 
 /* ---------------------------------- */
 /* RESPONSIVE DESIGN                  */

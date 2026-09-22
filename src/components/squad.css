@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
+
+.squad-section {
+  font-family: 'Cairo', sans-serif;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+.section-header {
+  text-align: right;
+  margin-bottom: 25px;
+}
+
+.section-header h2 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.section-header .subtitle {
+  color: #a0a0a0;
+  font-size: 15px;
+}
+
+/* Grid Layout */
+.player-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* 3D Flip Card Container */
+.player-card {
+  aspect-ratio: 3 / 4;
+  perspective: 1000px;
+  background-color: transparent;
+}
+
+.player-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+  border-radius: 12px;
+}
+
+.player-card:hover .player-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Common Card Faces */
+.player-card-front,
+.player-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #282828;
+  box-sizing: border-box;
+}
+
+/* Front Face Styles */
+.player-card-front {
+  background: linear-gradient(180deg, #1c1c1c 0%, #101010 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.player-number {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.player-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.player-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.3s ease;
+}
+
+.player-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 14px 14px 14px;
+  z-index: 2;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.6) 60%, transparent 100%);
+  text-align: right;
+}
+
+.player-position {
+  font-size: 11px;
+  color: #a0a0a0;
+  font-weight: 600;
+  display: block;
+}
+
+.player-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 2px 0 0 0;
+}
+
+/* Back Face Styles */
+.player-card-back {
+  background-color: #141414;
+  transform: rotateY(180deg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: right;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.8);
+}
+
+.back-header {
+  border-bottom: 1px solid #282828;
+  padding-bottom: 10px;
+}
+
+.back-number {
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+  display: block;
+}
+
+.back-english-name {
+  font-size: 13px;
+  color: #888888;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.player-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+  color: white;
+}
+
+.stat-item {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #222222;
+  padding-bottom: 6px;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.stat-value {
+  font-size: 13px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Action Link */
+.team-link-wrapper {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.full-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  border: 1px solid #333333;
+  color: #ffffff;
+  padding: 10px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.full-link:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+/* Responsive Queries */
+@media (max-width: 900px) {
+  .player-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .player-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .player-name {
+    font-size: 14px;
+  }
+
+  .section-header h2 {
+    font-size: 22px;
+  }
+}

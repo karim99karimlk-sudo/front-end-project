@@ -51,7 +51,7 @@ export function HistoryPage() {
             </div>
             <figure className="history-image">
               <img src={FisrtTeam} alt="USMO first team" />
-              <figcaption id="img2Cap" style={{ textAlign: 'center', color: '#4b4b4b' }}>
+              <figcaption id="img2Cap" style={{ textAlign: 'center', color: '#5d5d5d' }}>
                 الفريق الأول للنادي
               </figcaption>
             </figure>
@@ -70,7 +70,7 @@ export function HistoryPage() {
             </div>
             <figure className="history-image">
               <img src={BaAroubImg} alt="Ba Aroub" />
-              <figcaption style={{ textAlign: 'center', color: '#4b4b4b' }}>
+              <figcaption style={{ textAlign: 'center', color: '#5d5d5d' }}>
                 المدرب الأول للنادي، “با عروب” (رحمه الله) (1927–2020).
               </figcaption>
             </figure>
@@ -90,7 +90,7 @@ export function HistoryPage() {
             </div>
             <figure className="history-image">
               <img src={USMOTeam86} alt="USMO vs rsb" />
-              <figcaption style={{ textAlign: 'center', color: '#4b4b4b', fontSize: '10px' }}>
+              <figcaption style={{ textAlign: 'center', color: '#5d5d5d', fontSize: '10px' }}>
                 USMO VS RSB - THRONE CUP 1987 - Moulay Abdellah Stadium .<br />
                 الواقفون من اليمين: إبراهيم الزهواني، محمد الإدريسي، علي الصديق، مصطفى المباركي، قويدر البحري، قويدر بلحوان.<br />
                 الجالسون من اليمين: محمد شنوف، محمد مساعد، سمير رمضاني، عبد المولى بنتاهر، إدريس عزاوي.
@@ -109,7 +109,7 @@ export function HistoryPage() {
             </div>
             <figure className="history-image">
               <img src={USMOTeam90} alt="1990" />
-              <figcaption style={{ textAlign: 'center', color: '#4b4b4b', fontSize: '10px' }}>
+              <figcaption style={{ textAlign: 'center', color: '#5d5d5d', fontSize: '10px' }}>
                 مباراة الصعود إلى القسم الوطني الأول لأول مرة أمام حسنية الناظور بمدينة العروي. <br />
                 الواقفون من اليمين: العابد (رحمه الله)، المباركي، بقال، گوار، الزهواني، السميري. <br />
                 الجالسون من اليمين: مالا، أبخار، الصوفي، إدريس، عبد المولى. <br />

@@ -38,11 +38,11 @@ export function Hero() {
       <i
         className="fa-solid fa-angles-down fa-fade"
         style={{
-          color: 'rgb(0, 0, 0)',
+          color: 'rgb(255, 255, 255)',
           zIndex: 3,
           position: 'absolute',
           textAlign: 'center',
-          bottom: '10px',
+          bottom: '5px',
           fontSize: '1.8rem',
         }}
       ></i>
