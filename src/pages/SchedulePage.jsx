@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
-import './SchedulePage.css'
+import './SchedulePage.css';
 
 // Schedules data object
 const schedules = {
   '26-27': {
     matches: [
-      ['الدورة 1', '--', '🏠', 'MCO', ''],
+      ['الدورة 1', '--', '🏠', 'MCO', '', '#'],
       ['الدورة 2', '--', '✈️', 'SCCM', '', '#'],
       ['الدورة 3', '--', '🏠', 'OCS', '', '#'],
       ['الدورة 4', '--', '✈️', 'WAF', '', '#'],
@@ -66,8 +66,8 @@ const schedules = {
       ['الدورة 23', '16:00 - 26/05/02', '🏠', 'WAF', '<strong>1</strong>-0', '#'],
       ['الدورة 24', '16:00 - 26/05/10', '✈️', 'MAT', '2-<strong>0</strong>', 'https://www.youtube.com/watch?v=cU6iGN5rxL8'],
       ['الدورة 25', '16:00 - 26/05/24', '🏠', 'RAC', '<strong>3</strong>-1', 'https://www.youtube.com/watch?v=H4Emwwroln0&t=164s'],
-      ['الدورة 26', '16:00 - 26/06/06', '✈️', 'MCO', '2-<strong>1</strong>', 'video.html?v=H4Emwwroln0&t=16s'],
-      ['الدورة 27', '16:00 - 26/06/13', '🏠', 'USB', '<strong>1</strong>-0', 'video.html?v=H4Emwwroln0&t=164s'],
+      ['الدورة 26', '16:00 - 26/06/06', '✈️', 'MCO', '2-<strong>1</strong>', 'https://www.youtube.com/watch?v=H4Emwwroln0&t=16s'],
+      ['الدورة 27', '16:00 - 26/06/13', '🏠', 'USB', '<strong>1</strong>-0', 'https://www.youtube.com/watch?v=H4Emwwroln0&t=164s'],
       ['الدورة 28', '16:00 - 26/06/20', '✈️', 'JSS', '2-<strong>0</strong>', '#'],
       ['الدورة 29', '16:00 - 26/06/27', '🏠', 'CAK', '<strong>1</strong>-1', '#'],
       ['الدورة 30', '16:00 - 26/07/05', '✈️', 'WST', '0-<strong>1</strong>', '#'],
@@ -77,7 +77,7 @@ const schedules = {
 
 // Helper function to evaluate match result class
 function getResultClass(scoreString) {
-  if (!scoreString) return 'draw';
+  if (!scoreString || scoreString === '--') return 'pending';
 
   let us = 0;
   let them = 0;
@@ -108,65 +108,68 @@ export function SchedulePage() {
 
   return (
     <>
-    <title>Schedule</title>
+      <Header />
 
-    <Header />
+      <div className="schedule-container" dir="rtl">
+        <div className="schedule-top">
+          <h2>جدول المباريات - البطولة الاحترافية 2</h2>
+          <select
+            id="seasonSelect"
+            value={selectedSeason}
+            onChange={(e) => setSelectedSeason(e.target.value)}
+          >
+            <option value="26-27">الموسم الرياضي 2026-2027</option>
+            <option value="25-26">الموسم الرياضي 2025-2026</option>
+          </select>
+        </div>
 
-    <div className="schedule-container">
-      <div className="schedule-top">
-        <h2>البطولة الإحترافية للقسم الوطني 2</h2>
-        <select
-          id="seasonSelect"
-          value={selectedSeason}
-          onChange={(e) => setSelectedSeason(e.target.value)}
-        >
-          <option value="26-27"> الجدول لموسم 2026-2027 </option>
-          <option value="25-26"> الجدول لموسم 2025-2026 </option>
-        </select>
+        <div className="table-responsive">
+          <table className="schedule-table">
+            <thead>
+              <tr>
+                <th>الجولة</th>
+                <th>
+                  <span className="icon">🗓️</span> التاريخ
+                </th>
+                <th>
+                  <span className="icon">📍</span>
+                </th>
+                <th>الخصم</th>
+                <th>
+                  <span className="icon">🥅</span> النتيجة
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {currentMatches.map((match, index) => {
+                const scoreString = match[4] || '';
+                const resultClass = getResultClass(scoreString);
+
+                return (
+                  <tr key={index} className={index % 2 !== 0 ? 'alt-row' : ''}>
+                    <td className="round-cell">{match[0]}</td>
+                    <td className="date-cell">{match[1]}</td>
+                    <td className="location-cell">{match[2]}</td>
+                    <td className="opponent-cell">{match[3]}</td>
+                    <td>
+                      {scoreString ? (
+                        <span
+                          className={`score ${resultClass}`}
+                          dangerouslySetInnerHTML={{ __html: scoreString }}
+                        />
+                      ) : (
+                        <span className="score pending">--</span>
+                      )}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
       </div>
 
-      <table className="schedule-table">
-        <thead>
-          <tr>
-            <th style={{ textAlign: 'center' }}>د</th>
-            <th>
-              <span className="icon center">🗓️</span>
-            </th>
-            <th>
-              <span className="icon center">📍</span>
-            </th>
-            <th>الخصم</th>
-            <th>
-              <span className="icon center">🥅</span>
-            </th>
-          </tr>
-        </thead>
-        <tbody id="scheduleBody">
-          {currentMatches.map((match, index) => {
-            const scoreString = match[4] || '';
-            const resultClass = getResultClass(scoreString);
-
-            return (
-              <tr key={index} className={index % 2 !== 0 ? 'alt-row' : ''}>
-                <td>{match[0]}</td>
-                <td>{match[1]}</td>
-                <td>{match[2]}</td>
-                <td>{match[3]}</td>
-                <td>
-                  <span
-                    className={`score ${resultClass}`}
-                    dangerouslySetInnerHTML={{ __html: scoreString }}
-                  />
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </div>
-
-    <Footer />
+      <Footer />
     </>
-    
   );
 }

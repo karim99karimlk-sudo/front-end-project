@@ -1,193 +1,202 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
+
+body {
   margin: 0;
-  padding-top: 100px;
+  padding-top: 80px;
   font-family: 'Cairo', sans-serif;
-  background-color: #000000;
-
+  background-color: #0d0d0d;
+  color: #ffffff;
 }
-a{
-  text-decoration: none;
-  color: white;
-}
-
 
 .schedule-container {
-    max-width: 1250px;
-    margin: 20px auto;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
-.schedule-container h2{
+.schedule-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  gap: 12px;
+}
+
+.schedule-top h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
   text-align: center;
-  font-size: 22px;
-  font-weight: bold;
+  padding-top: 90px;
+}
+
+#seasonSelect {
+  padding: 8px 16px;
+  border: 1px solid #333333;
+  border-radius: 20px;
+  font-size: 14px;
   font-family: 'Cairo', sans-serif;
-  margin-bottom: 10px;
-  color: #000000;
+  cursor: pointer;
+  background: #181818;
+  color: #ffffff;
+  outline: none;
+  transition: border-color 0.3s ease;
 }
 
-
-.schedule-top{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    flex-wrap:wrap;
-    margin-bottom:20px;
+#seasonSelect:hover,
+#seasonSelect:focus {
+  border-color: #666666;
 }
 
-#seasonSelect{
-    padding:10px 16px;
-    border:1px solid #000000;
-    border-radius:30px;
-    font-size:15px;
-    font-family: 'Cairo', sans-serif;
-    cursor:pointer;
-    background:#000000;
-    color: white;
-    
+/* Scrollable Container with Fixed Max-Height */
+.table-responsive {
+  width: 100%;
+  max-height: 520px; /* يتحكم في أقصى ارتفاع للجدول */
+  overflow-y: auto;  /* إضافة التمرير العمودي */
+  overflow-x: auto;  /* التمرير الأفقي للشاشات الصغيرة */
+  border-radius: 12px;
+  border: 1px solid #222222;
+  background-color: #141414;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-@media(max-width:768px){
-
-    .schedule-top{
-        justify-content:center;
-        gap:15px;
-        flex-direction:column;
-    }
-
-    #seasonSelect{
-        width:220px;
-    }
-
-    body{
-     padding-top: 60px; 
-    }
-
+/* Custom Scrollbar Styling */
+.table-responsive::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
 }
 
-.schedule-header {
-    text-align: center;
-    color: #d32f2f;
-    letter-spacing: 1px;
-    font-size: 1.2rem;
+.table-responsive::-webkit-scrollbar-track {
+  background: #141414;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+  background: #555555;
 }
 
 .schedule-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-    color: #000000;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.769) ;
-    border-radius: 10px;
-
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
 }
 
+/* Sticky Header so column titles remain visible on scroll */
 .schedule-table th {
-    color: #000000;
-    font-weight: 500;
-    padding: 10px;
-    text-align: center;
-    border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #1c1c1c;
+  color: #a0a0a0;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 8px; /* تقليل المسافة العمودية */
+  border-bottom: 1px solid #2a2a2a;
 }
 
 .schedule-table td {
-    padding: 5px 15px;
-    vertical-align: middle;
-    text-align: center;
+  padding: 7px 8px; /* تقليل ارتفاع الصفوف لجعل الجدول أضيق */
+  font-size: 13px;
+  color: #dddddd;
+  border-bottom: 1px solid #1f1f1f;
+  vertical-align: middle;
+}
+
+.schedule-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.schedule-table tbody tr:hover {
+  background-color: #222222;
 }
 
 .alt-row {
-    background-color: #e1e1e1;
-}
-.schedule-table tbody tr{
-    transition:.2s;
+  background-color: #181818;
 }
 
-.schedule-table tbody tr:hover{
-    background:#cbcbcb;
-}
-.left {
-   text-align: left;
-   align-items:start;
+.round-cell {
+  font-weight: 700;
+  color: #ffffff;
 }
 
+.opponent-cell {
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.date-cell {
+  direction: ltr;
+  font-size: 12px;
+  color: #aaaaaa;
+}
+
+/* Compact Score Pill Styles */
 .score {
-    font-family: monospace;
-    font-size: 1.1rem;
-    padding: 2px;
+  font-family: monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 2px 8px; /* تقليل الحجم ليتناسب مع الصفوف النحيفة */
+  border-radius: 4px;
+  display: inline-block;
+  min-width: 42px;
 }
 
-.info-btn {
-    background-color: #000000;
-    color: white;
-    border: none;
-    width: 50px;
-    height: 35px;
-    border-radius: 12px;
-    font-weight: bold;
-    cursor: pointer;
-   
-    transition: background 0.2s;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-}
-.info-btn i{
-    font-size: 20px;
-    align-items: center;
+.score.win {
+  background-color: #1e7e34;
+  color: #ffffff;
 }
 
-.info-btn:hover {
-    background-color: #5d5d5d;
+.score.loss {
+  background-color: #bd2130;
+  color: #ffffff;
 }
 
-.icon {
-    font-size: 1rem;
+.score.draw {
+  background-color: #495057;
+  color: #ffffff;
 }
 
-
-
-@media screen and (max-width: 768px) {
-    .schedule-table th,
-    .schedule-table td {
-        padding: 10px;
-        font-size: 0.9rem;
-        overflow: hidden;
-    }
-
-    .info-btn {
-        width: 40px;
-        height: 30px;
-        border-radius: 8px;
-        
-    }
-    .info-btn i {
-        font-size: 16px;
-    }
+.score.pending {
+  background-color: #282828;
+  color: #888888;
 }
 
+/* Media Queries */
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px;
+  }
 
-.score{
-    font-family: monospace;
-    font-size: 1.1rem;
-    padding: 4px 10px;
-    border-radius: 6px;
-    display: inline-block;
-    min-width: 45px;
-}
+  .schedule-top h2 {
+    font-size: 18px;
+    padding-top: 60px;
+  }
 
-.score.win{
-    background:#1f8b3a;
-    color:#fff;
-}
+  #seasonSelect {
+    width: 100%;
+    max-width: 240px;
+  }
 
-.score.loss{
-    background:#c62828;
-    color:#fff;
-}
+  .table-responsive {
+    max-height: 440px; /* ارتفاع أقل للشاشات الصغيرة */
+  }
 
-.score.draw{
-    background:#666;
-    color:#fff;
+  .schedule-table th,
+  .schedule-table td {
+    padding: 6px 4px;
+    font-size: 12px;
+  }
+
+  .score {
+    font-size: 0.8rem;
+    padding: 2px 6px;
+    min-width: 36px;
+  }
 }
