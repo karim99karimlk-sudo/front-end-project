@@ -8,18 +8,14 @@ export function Footer() {
           <div className="players-container">
             <div className="keepers">
               <h2>حراس المرمى</h2>
-              <p><strong>عبدالله</strong> أمغار</p>
               <p><strong>علوي</strong> المنور</p>
               <p><strong>حمزة</strong> العشاوي</p>
-              <p><strong>أمين</strong> غنيمي</p>
               <p><strong>صلاح الدين</strong> كعواشي</p>
             </div>
     
             <div className="defenders">
               <h2>المدافعين</h2>
-              <p><strong>ياسين</strong> بوعالي</p>
               <p><strong>عبدالكريم</strong> أعليون</p>
-              <p><strong>حكيم</strong> أكليدو</p>
               <p><strong>المهدي</strong> دهر</p>
               <p><strong>پاكوم</strong> مالديني</p>
               <p><strong>حمزة</strong> كعوش</p>
@@ -33,9 +29,6 @@ export function Footer() {
               <p><strong>زوهير</strong> جبيلو</p>
               <p><strong>حمزة</strong> البارودي</p>
               <p><strong>بلال</strong> نفاعي</p>
-              <p><strong>سعيد</strong> أزروال</p>
-              <p><strong>أوسامة</strong> دهر</p>
-              <p><strong>يونس</strong> دويب</p>
               <p><strong>عصام</strong> الكعبوني</p>
               <p><strong>حمزة</strong> اليماني</p>
               <p><strong>علي</strong> البناني</p>
@@ -46,11 +39,9 @@ export function Footer() {
               <p><strong>بدر</strong> مهدوب</p>
               <p><strong>طه</strong> ضيف</p>
               <p><strong>وسيم</strong> غريبا</p>
-              <p><strong>ياسين</strong> مرزوڭي</p>
               <p><strong>أسامة</strong> الصغيري</p>
               <p><strong>صاماكي</strong> أداما</p>
               <p><strong>تراوري</strong> أداما</p>
-              <p><strong>حمزة</strong> قرقور</p>
               <p><strong>رضوان</strong> المرس</p>
               <p><strong>إبراهيم</strong> العماري</p>
             </div>
