@@ -74,7 +74,7 @@ export function Footer() {
             </p>
     
             <p>
-              إذا كانت لديك أي تعليقات أو طلبات أو اقتراحات، أو إذا كنت ترغب في المساهمة في الموقع، فلا تتردد في التواصل معي عبر البريد الإلكتروني: <a className="fb-link" href="mailto:karimdev@usmoujda.com">karimdev@usmoujda.com</a>
+              إذا كانت لديك أي تعليقات أو طلبات أو اقتراحات، أو إذا كنت ترغب في المساهمة في الموقع، فلا تتردد في التواصل معي عبر البريد الإلكتروني: <a className="fb-link" href="mailto:karimdev@usmoujda.com">karim99karimlk@gamil.com</a>
             </p>
           </div>
         </footer>

@@ -12,7 +12,7 @@ export default function Squad() {
     {
       id: 1,
       number: '4',
-      name: 'ياشين أكليدو',
+      name: 'ياسين أكليدو',
       englishName: 'Yassine Aklidou',
       position: 'مدافع',
       image: AklidouImg,
@@ -34,7 +34,7 @@ export default function Squad() {
     {
       id: 3,
       number: '10',
-      name: 'بدر محذوب',
+      name: 'بدر مهدوب',
       englishName: 'Badr Mahdoub',
       position: 'وسط',
       image: MahdoubImg,
