@@ -36,31 +36,11 @@ export default function Matches() {
   // Mock data for upcoming/recent matches list
   const otherMatches = [
     {
-      id: 1,
-      round: 'الدورة 2',
-      date: '2026-10-04',
-      team1: { name: 'USMO', logo: USMOLogo },
-      team2: { name: 'SCCM', logo: UnknownTeamLogo },
-      score: 'VS',
-      finished: true,
-      highlights: '#',
-    },
-    {
-      id: 2,
-      round: 'الدورة 3',
-      date: '---',
-      team1: { name: 'OCS', logo: UnknownTeamLogo },
-      team2: { name: 'USMO', logo: USMOLogo },
-      score: 'VS',
-      finished: true,
-      highlights: '#',
-    },
-    {
       id: 3,
       round: 'الدورة 4',
       date: '---',
-      team1: { name: 'USMO', logo: USMOLogo },
-      team2: { name: 'WAF', logo: UnknownTeamLogo },
+      team1: { name: 'WAF', logo: UnknownTeamLogo },
+      team2: { name: 'USMO', logo: USMOLogo },
       score: 'VS',
       finished: true,
       highlights: '#',
@@ -97,25 +77,25 @@ export default function Matches() {
 
             <div className="tournament-info">
               <span className="league-name">البطولة الوطنية الاحترافية</span>
-              <span className="round-tag">الدورة 1</span>
+              <span className="round-tag">الدورة 3</span>
             </div>
 
             {/* Teams Faceoff */}
             <div className="main-teams">
               <div className="team">
                 <div className="logo-wrapper">
-                  <img src={USMOLogo} alt="USMO" />
+                  <img src={UnknownTeamLogo} alt="OCS" />
                 </div>
-                <span className="team-name">USMO</span>
+                <span className="team-name">OCS</span>
               </div>
 
               <div className="vs-badge">VS</div>
 
               <div className="team">
                 <div className="logo-wrapper">
-                  <img src={UnknownTeamLogo} alt="MCO" />
+                  <img src={USMOLogo} alt="USMO" />
                 </div>
-                <span className="team-name">MCO</span>
+                <span className="team-name">USMO</span>
               </div>
             </div>
 
@@ -123,11 +103,11 @@ export default function Matches() {
             <div className="match-meta">
               <div className="meta-item">
                 <i className="fa-regular fa-calendar-days"></i>
-                <span>الأحد 27 شتنبر 2026</span>
+                <span>--</span>
               </div>
               <div className="meta-item">
                 <i className="fa-regular fa-clock"></i>
-                <span>16:00 بتوقيت المغرب</span>
+                <span>--</span>
               </div>
               <div className="meta-item">
                 <i className="fa-solid fa-location-dot"></i>
