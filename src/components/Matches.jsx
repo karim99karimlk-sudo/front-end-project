@@ -42,7 +42,7 @@ export default function Matches() {
     {
       id: 3,
       round: 'الدورة 4',
-      date: 'الأحد 11 أكتوبر 2026',
+      date: 'الأحد 18 أكتوبر 2026',
       team1: { name: 'WAF', logo: Waf },
       team2: { name: 'USMO', logo: USMOLogo },
       score: 'VS',
