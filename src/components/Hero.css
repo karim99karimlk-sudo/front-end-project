@@ -9,7 +9,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0 0 12px 12px; /* Optional rounded corners */
 }
 
 /* Background image responsiveness & smooth transition */
@@ -42,7 +41,6 @@
   /* how much you want faded*/
   background: linear-gradient(to bottom, transparent, rgb(0, 0, 0));
   /* or match page bg*/
-  border-radius: 0 0 10px 10px;
   z-index: 2;
 }
 
@@ -67,7 +65,7 @@
   .hero {
     height: 75vh;
     min-height: 250px;
-    margin-bottom: 24px;
+    margin-bottom: 14px;
   }
 }
 

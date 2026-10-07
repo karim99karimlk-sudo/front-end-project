@@ -17,7 +17,6 @@ export function Footer() {
           <h2>المدافعين</h2>
           <p><strong>عبدالكريم</strong> أعليون</p>
           <p><strong>المهدي</strong> دهر</p>
-          <p><strong>پاكوم</strong> مالديني</p>
           <p><strong>حمزة</strong> كعوش</p>
           <p><strong>جواد</strong> خلوق</p>
           <p><strong>رباح</strong> كوكوش</p>
@@ -27,7 +26,6 @@ export function Footer() {
           <h2>الوسط</h2>
           <p><strong>محمد</strong> حموش</p>
           <p><strong>زوهير</strong> جبيلو</p>
-          <p><strong>حمزة</strong> البارودي</p>
           <p><strong>بلال</strong> نفاعي</p>
           <p><strong>عصام</strong> الكعبوني</p>
           <p><strong>حمزة</strong> اليماني</p>
