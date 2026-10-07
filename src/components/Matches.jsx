@@ -5,6 +5,10 @@ import './Matches.css';
 import BotolaProLogo from '../pages/USMO IMG/Icons/botolapro2.svg';
 import UnknownTeamLogo from '../pages/USMO IMG/Icons/unknown.team.png';
 import USMOLogo from '../pages/USMO IMG/logo/cropped_circle_image.png';
+import Ocs from '../pages/USMO IMG/botola2teams/Ocs.svg';
+import Waf from '../pages/USMO IMG/botola2teams/WAF.png';
+
+
 export default function Matches() {
   // Target date for the upcoming match (Sunday, Oct 10, 2026)
   const targetTime = new Date('2026-10-10T15:00:00').getTime();
@@ -39,7 +43,7 @@ export default function Matches() {
       id: 3,
       round: 'الدورة 4',
       date: 'الأحد 11 أكتوبر 2026',
-      team1: { name: 'WAF', logo: UnknownTeamLogo },
+      team1: { name: 'WAF', logo: Waf },
       team2: { name: 'USMO', logo: USMOLogo },
       score: 'VS',
       finished: true,
@@ -83,7 +87,7 @@ export default function Matches() {
             <div className="main-teams">
               <div className="team">
                 <div className="logo-wrapper">
-                  <img src={UnknownTeamLogo} alt="OCS" />
+                  <img src={Ocs} alt="OCS" />
                 </div>
                 <span className="team-name">OCS</span>
               </div>
