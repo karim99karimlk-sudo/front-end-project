@@ -38,7 +38,6 @@ export function Footer() {
           <p><strong>طه</strong> ضيف</p>
           <p><strong>وسيم</strong> غريبا</p>
           <p><strong>أسامة</strong> الصغيري</p>
-          <p><strong>صاماكي</strong> أداما</p>
           <p><strong>تراوري</strong> أداما</p>
           <p><strong>رضوان</strong> المرس</p>
           <p><strong>إبراهيم</strong> العماري</p>
