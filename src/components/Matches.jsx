@@ -6,8 +6,8 @@ import BotolaProLogo from '../pages/USMO IMG/Icons/botolapro2.svg';
 import UnknownTeamLogo from '../pages/USMO IMG/Icons/unknown.team.png';
 import USMOLogo from '../pages/USMO IMG/logo/cropped_circle_image.png';
 export default function Matches() {
-  // Target date for the upcoming match (Sunday, Sept 27, 2026)
-  const targetTime = new Date('2026-09-27T16:00:00').getTime();
+  // Target date for the upcoming match (Sunday, Oct 10, 2026)
+  const targetTime = new Date('2026-10-10T15:00:00').getTime();
 
   const calculateTimeLeft = useCallback(() => {
     const difference = targetTime - Date.now();
@@ -38,12 +38,12 @@ export default function Matches() {
     {
       id: 3,
       round: 'الدورة 4',
-      date: '---',
+      date: 'الأحد 11 أكتوبر 2026',
       team1: { name: 'WAF', logo: UnknownTeamLogo },
       team2: { name: 'USMO', logo: USMOLogo },
       score: 'VS',
       finished: true,
-      highlights: '#',
+      
     },
     {
       id: 4,
@@ -52,8 +52,7 @@ export default function Matches() {
       team1: { name: 'USMO', logo: USMOLogo },
       team2: { name: 'JSS', logo: UnknownTeamLogo },
       score: 'VS',
-      finished: true,
-      highlights: '#',
+      finished: false,
     }
   ];
 
@@ -103,11 +102,11 @@ export default function Matches() {
             <div className="match-meta">
               <div className="meta-item">
                 <i className="fa-regular fa-calendar-days"></i>
-                <span>--</span>
+                <span>السبت 10 أكتوبر 2026 </span>
               </div>
               <div className="meta-item">
                 <i className="fa-regular fa-clock"></i>
-                <span>--</span>
+                <span>15:00</span>
               </div>
               <div className="meta-item">
                 <i className="fa-solid fa-location-dot"></i>
